@@ -232,7 +232,7 @@ class PanelButton extends PanelMenu.Button {
                 style_class: "no-padding popup-menu-box",
                 activate: false,
             });
-            this.menuBox.set_vertical(true);
+            this.menuBox.orientation = Clutter.Orientation.VERTICAL;
             this.menuBox.remove_style_class_name("popup-menu-item");
             this.menuBox.remove_all_children();
         }
@@ -312,7 +312,7 @@ class PanelButton extends PanelMenu.Button {
     addMenuPlayers() {
         if (this.menuPlayers == null) {
             this.menuPlayers = new St.BoxLayout({
-                vertical: true,
+                orientation: Clutter.Orientation.VERTICAL,
             });
         }
         if (this.menuPlayersTextBox == null) {
@@ -549,7 +549,7 @@ class PanelButton extends PanelMenu.Button {
     addMenuLabels() {
         if (this.menuLabels == null) {
             this.menuLabels = new St.BoxLayout({
-                vertical: true,
+                orientation: Clutter.Orientation.VERTICAL,
             });
         }
         if (this.menuLabelTitle != null) {
